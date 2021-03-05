@@ -1,13 +1,35 @@
+<!-- Indtil videre kører denne her side på at du kan modifere alle tingene ved spillet. Vi skal senere ændre det sådan så at du kan vælge imellem at køre en færdiglavet Sim (noget som vi har bestemt dataerne på), eller køre en modiferet version hvor du selv kan inputte alt data-->
 <!DOCTYPE html>
 <html lang="da-DK">
 <head>
     <script type="text/javascript" src="Simulation.js"></script> <!--Her bliver der referet til JavaScriptet-->    
+    <link rel = "stylesheet" type = "text/css" href = "Stylesheet.css">
 </head>
-<body>
-<h1>Indtast</h1>
-    Skildpaddehastighed <br><input type="number" id="a"><br> <br>
+<body><h1>Indtast data</h1>
+<h2>Kanin</h2>
+    Harehastighed <input type="number" id="b"><br><br>
+    Lurlængde <input type="number" id="d"><br><br>
+    Tid imellem lur <input type="number" id="e"><br><br>
+      
+
+<h2>Skildpadde</h2>
+        Skildpaddehastighed <input type="number" id="a"><br><br>
+
+<h2>Andet</h2>
+        Racedistance <input type="number" id="c"><br><br>
  
     <button onclick="beregnSim()">Beregn</button>
         <p id = "Skildpaddeposition"></p>
+        <p id = "Hareposition"></p>
+    
+    
+<canvas>
+    
+    
+    
+    
+</canvas>
+    
+    
 </body>
 </html>
