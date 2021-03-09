@@ -1,19 +1,7 @@
-/*Visuel test*/
-background(194, 160, 101);
-noStroke();
-fill(255, 247, 0);
-rect(0, 9, width, 15);
-fill (0, 0, 0);
-text("Start", 181, 21);
-noStroke();
-Fill(255,247, 0);
-rect(0, 341, width, 15);
-fill(0, 0, 0);
-text("FINISH", 181, 352);
+#canvas {
+    width = "200";
+    height = "100";
+    border: 1px solid black;  
+    background-color: rgb(194, 160, 101);
 
-/*Kanin og Hare*/
-
-/*Ny test*/
-.canvas {
-    color: black;
 }

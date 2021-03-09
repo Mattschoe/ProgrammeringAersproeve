@@ -1,3 +1,4 @@
+
 function beregnSim() {
     a = document.getElementById('a').value;
     b = document.getElementById('b').value;
@@ -36,6 +37,10 @@ function beregnSim() {
     
     document.getElementById("Hareposition").innerHTML =  "Hareposition = " + +harePos + +b;
 }
+
+
+
+
 
 
 
