@@ -33,8 +33,8 @@ while (tortoisePos < raceDistance && harePos < raceDistance) {
         }
     }
 }
-/* Haresøvn*/
 
+/* Haresøvn*/
 console.log('Tortoise position: ' + tortoisePos);
 console.log('Hare position: ' + harePos);
 
@@ -46,3 +46,5 @@ window.onload = function () {
     ctx.drawImage(img, 10, 10);
 };
 /*Canvas pictures*/
+
+
