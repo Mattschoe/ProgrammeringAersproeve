@@ -1,0 +1,10 @@
+body {
+    background: gray;
+}
+
+canvas#viewport {
+    border: 1px solid black;
+    background: beige;
+    height: 400px;
+    width: 400px;
+}
