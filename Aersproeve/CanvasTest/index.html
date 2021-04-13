@@ -10,11 +10,11 @@
 <body>
     <style type="text/css">
         canvas {}
-
     </style>
     <canvas id="viewport"></canvas>
 
     <img id="Skildpadde" width="50" height="50" src="Skildpadde.png">
+    <img id="Hare" width="50" height="50" src="Hare.png">
 
     <script>
         window.onload = function() {
@@ -31,12 +31,10 @@
             txt.fillText("Slut", 135, 35, 100);
 
             /*Skilpadde og Hare*/
-            var img = document.getElementById("Skildpadde");
-            char.drawImage(img, 75, 120, 30, 20);
+            var SkildpaddeImg = document.getElementById("Skildpadde");
+            var HareImg = document.getElementById("Hare");
+            char.drawImage(SkildpaddeImg, 75, 120, 30, 20);
+            char.drawImage(HareImg, 190, 120, 30, 20);
         }
-        
-            <h2> Hejsa! </h2> 
     </script>
-</body>
-
-</html>
+</body></html>
