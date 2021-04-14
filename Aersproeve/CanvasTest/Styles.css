@@ -1,7 +1,3 @@
-body {
-    background: gray;
-}
-
 canvas#viewport {
     border: 1px solid black;
     background: beige;
@@ -10,14 +6,103 @@ canvas#viewport {
 }
 
 #myContainer {
-  width: 400px;
-  height: 400px;
-  position: relative;
-  background: yellow;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: yellow;
 }
+
 #myAnimation {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background-color: red;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+}
+
+/* Dette øverset del sørger for at der ikke er en hcid border hele vejen ude i kanten */
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: gray;
+}
+
+/* Dette styke style bestemer hvordan mit header skal se ud */
+header {
+    background: url('https://media.lonelyplanet.in/wp-content/uploads/2019/06/shutterstock_781904569-Beautiful-tropical-green-forest-with-morning-sunlight-wayanad-kerala-india-Image-1280x525.jpg');
+    background-size: cover;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Dette sørger for at alt i sectionet rykkeer sig godt i forhold til hindanden */
+section {
+    display: flex;
+}
+
+/* Den har styler navigations menuen */
+nav {
+    background: #8c9e6b;
+    padding: 20px;
+}
+
+/* Menuen er sat op i liste form. Dette sørger for at det ser godt ud */
+/* De tre næste hjælper menuen med at se og fungere bedre. Den sætter noget skygge på og lidt animation som hover effekt*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #B6B8AE;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    color: darkgreen;
+    font-weight: Bold;
+}
+
+/* Den her styler alt inden for artilkerne. I mit tilfæld bruger jeg det mest til farver. Der er specifike steder inde i HTMLen hvor der bliver specificeret størrelsen til et lille stykke tekst */
+article {
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+/* Det her sørger for at alle billeder beholder sin ratio, så det ikke ser stretched ud. Det gør også at du kan resize browseren og billedet vil følge med.*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* dette sørger for det link der står i footeren */
+.LTP {
+    color: orange;
+    text-shadow: 1px 1px red;
+}
+
+/* Sørger for footerens farve */
+footer {
+    background-color: #1d1b1d;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Dette stykke  gør at hjemmesinde fungerer i foreskellige størelser, så du kan bruge det på alle devices, Du kan prøve at rezise din browser. Når browseren bliver smalt nok så rykker menuen sig på toppen for at gøre det mere brugervenligt */
+@media (max-width: 600px) {
+    section {
+        flex-direction: column;
+    }
 }
