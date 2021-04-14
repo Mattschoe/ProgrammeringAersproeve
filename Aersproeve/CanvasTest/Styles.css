@@ -25,6 +25,7 @@ canvas#viewport {
     margin: 0
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: gray;
@@ -32,7 +33,8 @@ body {
 
 /* Dette styke style bestemer hvordan mit header skal se ud */
 header {
-    background: url('https://media.lonelyplanet.in/wp-content/uploads/2019/06/shutterstock_781904569-Beautiful-tropical-green-forest-with-morning-sunlight-wayanad-kerala-india-Image-1280x525.jpg');
+    width: 100%;
+    background-image: url(Billeder/Header.jpeg);
     background-size: cover;
     padding: 30px;
     text-align: center;
@@ -47,8 +49,9 @@ section {
 
 /* Den har styler navigations menuen */
 nav {
-    background: #8c9e6b;
+    background: #194350;
     padding: 20px;
+
 }
 
 /* Menuen er sat op i liste form. Dette sørger for at det ser godt ud */
@@ -58,7 +61,7 @@ ul {
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #B6B8AE;
+    background-color: #9dbeb9;
 }
 
 li a {
@@ -69,7 +72,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-    color: darkgreen;
+    color: #ff8882;
     font-weight: Bold;
 }
 
@@ -81,12 +84,6 @@ article {
     padding: 10px;
 }
 
-/* Det her sørger for at alle billeder beholder sin ratio, så det ikke ser stretched ud. Det gør også at du kan resize browseren og billedet vil følge med.*/
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* dette sørger for det link der står i footeren */
 .LTP {
     color: orange;
@@ -95,6 +92,9 @@ img {
 
 /* Sørger for footerens farve */
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #1d1b1d;
     padding: 10px;
     text-align: center;
