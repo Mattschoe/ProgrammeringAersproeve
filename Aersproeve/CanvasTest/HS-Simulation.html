@@ -21,41 +21,9 @@
                 <li><a href="OmOs.html">OM OS</a></li>
             </ul>
         </nav>
-
-        <d>
-            <style type="text/css">
-                canvas {}
-            </style>
-            <canvas id="viewport"></canvas>
-
-            <img id="Skildpadde" width="50" height="50" src="Skildpadde.png">
-            <img id="Hare" width="50" height="50" src="Hare.png">
-
-
-            <script>
-                window.onload = function() {
-                    var c = document.getElementById("viewport");
-                    var ctx = c.getContext("2d");
-                    var char = c.getContext("2d"); /*Til characters*/
-                    var txt = c.getContext("2d"); /*Til text*/
-
-                    /* Start og Slut punkt*/
-                    ctx.fillRect(0, 113, 300, 5);
-                    ctx.fillRect(0, 15, 300, 5);
-                    txt.font = "15px Arial";
-                    txt.fillText("Start", 130, 110);
-                    txt.fillText("Slut", 135, 35, 100);
-
-                    /*Skilpadde og Hare*/
-                    var SkildpaddeImg = document.getElementById("Skildpadde");
-                    var HareImg = document.getElementById("Hare");
-                    char.drawImage(SkildpaddeImg, 75, 120, 30, 20);
-                    char.drawImage(HareImg, 190, 120, 30, 20);
-                }
-            </script>
-        </d>
-
-
+            <canvas id="canvas"></canvas>
     </section>
 
-</body></html>
+</body>
+
+</html>

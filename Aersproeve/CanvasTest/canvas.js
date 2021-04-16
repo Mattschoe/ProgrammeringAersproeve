@@ -1,9 +1,11 @@
 /* Skilpadde variables */
+var skildpadde = new Image();
 var tortoiseSpeed = 1;
 var tortoisePos = 0;
 /* Skilpadde variables */
 
 /* Hare variables */
+var hare = new Image();
 var hareSpeed = 2;
 var harePos = 0;
 /* Søvn variables */
@@ -38,16 +40,35 @@ while (tortoisePos < raceDistance && harePos < raceDistance) {
 console.log('Tortoise position: ' + tortoisePos);
 console.log('Hare position: ' + harePos);
 
-/*Canvas pictures*/
-window.onload = function () {
-    var canvas = document.getElementById("viewport");
-    var ctx = canvas.getContext("2d");
-    var SkildpaddeImg = document.getElementById("Skildpadde.png");
+function init() {
+    hare.src = 'Hare.png'
+    skildpadde.src = 'Skildpadde.png';
+    window.requestAnimationFrame(draw);
 }
 
-window.onload = function () {
-    var canvas = document.getElementById("viewport");
-    var ctx = canvas.getContext("2d");
-    var HareImg = document.getElementById("Hare.png")
+function draw() {
+    var ctx = document.getElementById('canvas').getContext('2d');
+
+    ctx.globalCompositeOperation = 'destination-over';
+    ctx.clearRect(0, 0, 300, 300);
+
+    //Hare
+    var time = new Date();
+    ctx.drawImage(hare, 60, 110, 40, 40);
+
+
+
+    //Skildpaddde
+    ctx.drawImage(skildpadde, 180, 110, 40, 40);
+
+
+
+
+    window.requestAnimationFrame(draw);
 }
-/*Canvas pictures*/
+
+function win() {
+
+}
+
+init();
