@@ -53,7 +53,6 @@ function draw() {
     ctx.clearRect(0, 0, 300, 300);
 
     //Hare
-    var time = new Date();
     ctx.drawImage(hare, 60, 110, 40, 40);
 
 
