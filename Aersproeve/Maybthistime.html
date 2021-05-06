@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html> 
+ <head>
+    <title>Hare og Skildpadde Simulation</title> 
+</head>
+ <body>
+    <p align="center"> 
+      <canvas id="mycanvas"></canvas> 
+    </p>
+ </body>
+ 
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+    frameRate(30);
+
+    var tortoiseSpeed = 1;
+    var hareSpeed = 2;
+    var raceDistance = 350;
+    var minsBetweenNaps = 30;
+    var napLength = 20;
+
+    var tortoisePos = 20;
+    var harePos = 20;
+    var minsSinceLastNap = 0;
+    var minsSinceNapStart = 0;
+
+    draw = function() {
+
+        if (tortoisePos < raceDistance && harePos < raceDistance) {
+            tortoisePos += tortoiseSpeed;
+            if (minsSinceLastNap <= minsBetweenNaps) {
+                harePos += hareSpeed;
+                minsSinceLastNap++;
+            } else {
+                if (minsSinceNapStart < napLength) {
+                    minsSinceNapStart++;
+                 } else {
+                    minsSinceLastNap = 0;
+                    minsSinceNapStart = 0;
+                }
+            }
+        }
+
+        background(194, 160, 101);
+        noStroke();
+        fill(255, 247, 0);
+        rect(0, 9, width, 15);
+        fill(0, 0, 0);
+        text("START", 181, 21);
+        noStroke();
+        fill(255, 247, 0);
+        rect(0, 341, width, 15);
+        fill(0, 0, 0);
+        text("FINISH", 181, 352);
+
+        fill(0, 255, 72);
+        text("🐢", 156, tortoisePos);
+        fill(0, 255, 72);
+        text("🐇", 228, harePos);
+};
+
+
+
+     
+     
+     
+     
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>
