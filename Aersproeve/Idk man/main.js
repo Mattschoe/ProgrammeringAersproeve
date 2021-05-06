@@ -1,44 +1,44 @@
-//Hare
+//Harevariabler
 var hareSpeed = 2;
-var harePos = 0 + hareSpeed;
+var harePos = 0;
 
-//Haresøvn
+//Haresøvnvariabler
 var minsImellemSøvn = 30;
 var søvnLængde = 20;
 var minsSidenSidsteSøvn = 0;
 var minsSidenSøvnStart = 0;
 
-//Skildpadde
+//Skildpaddevariabler
 var skildpaddeSpeed = 1;
 var skildpaddePos = 0;
 
-//Race
-var raceDistance = 250;
+//Racevariabler
+var raceDistance = 350;
 
-//Haresøvn 
-while (skildpaddePos < raceDistance && harePos < raceDistance) {
-    skildpaddePos += skildpaddeSpeed;
-    if (minsSidenSidsteSøvn <= minsImellemSøvn) {
+
+//Racefunktion
+function Race() {
+    while (harePos < raceDistance && skildpaddePos < raceDistance) {
+        skildpaddePos += skildpaddeSpeed;
         harePos += hareSpeed;
-        minsSidenSidsteSøvn++;
-    } else {
-         if (minsSidenSøvnStart < søvnLængde) {
-              minsSidenSøvnStart++;
-          } else {
-              minsSidenSidsteSøvn = 0;
-              minsSidenSøvnStart = 0;
-          }
     }
 }
 
-anime({
+
+//Finder hvem der har vundet
+if (harePos >= raceDistance > skildpaddePos) {
+    console.log("Hare vinder!")
+}
+
+//Animation
+var playButton = document.querySelector('.play');
+
+var Animation = anime({
     targets: 'img',
-    translateY: raceDistance,
-    duration: hareSpeed,
-    delay: 500,
+    translateY: -raceDistance,
+    duration: hareSpeed + 50000,
     direction: 'alternate',
-    loop: true
+    autoplay: false
 });
 
-console.log("Hareposition = " + harePos);
-console.log("Skildpaddeposition = " + skildpaddePos);
+playButton.addEventListener('click', function() {Animation.play(); });

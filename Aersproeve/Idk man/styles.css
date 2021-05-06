@@ -1,3 +1,28 @@
 body {
+    background-color: darkslategray;
+}
+
+canvas {
     background-color: beige;
+    border: 1px solid #000000;
+    width: 600px;
+    height: 600px;   
+}
+
+.RaceBackground {
+    background-color: beige;
+    width: 500px;
+    height: 600px;
+}
+
+.Hare {
+    position: relative;
+    left: 100px;
+    top: 470px;
+}
+
+.Skildpadde {
+    position: relative;
+    left: 200px;
+    top: 450px;
 }
