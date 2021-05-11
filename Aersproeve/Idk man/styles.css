@@ -2,27 +2,64 @@ body {
     background-color: darkslategray;
 }
 
-canvas {
-    background-color: beige;
-    border: 1px solid #000000;
-    width: 600px;
-    height: 600px;   
-}
-
 .RaceBackground {
     background-color: beige;
     width: 500px;
     height: 600px;
 }
 
-.Hare {
+.RaceBackground img {
     position: relative;
     left: 100px;
     top: 470px;
 }
 
-.Skildpadde {
-    position: relative;
-    left: 200px;
-    top: 450px;
+.Slutbanner {
+    position: absolute;
+    background-color: darkgoldenrod;
+    width: 500px;
+    height: 20px;
+    top: 50px;
 }
+
+.Startbanner {
+    position: absolute;
+    background-color: darkgoldenrod;
+    width: 500px;
+    height: 20px;
+    top: 436px;
+}
+
+.kontrolpanel {
+    background-color: navajowhite;
+    width: 500px;
+    height: 300px; 
+}
+
+.console {
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+
+button {
+    background-color: transparent;
+    color: black;
+    border: transparent;
+    padding: 10px 25px;
+    font-size: 18px;
+    position: relative;
+    top: 10px;
+    left: 2px;
+}
+
+button:focus {
+    background-color: #fff;
+    color: #000;
+}
+
+
+

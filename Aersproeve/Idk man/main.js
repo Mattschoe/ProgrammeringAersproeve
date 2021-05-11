@@ -2,12 +2,6 @@
 var hareSpeed = 2;
 var harePos = 0;
 
-//Haresøvnvariabler
-var minsImellemSøvn = 30;
-var søvnLængde = 20;
-var minsSidenSidsteSøvn = 0;
-var minsSidenSøvnStart = 0;
-
 //Skildpaddevariabler
 var skildpaddeSpeed = 1;
 var skildpaddePos = 0;
@@ -15,30 +9,31 @@ var skildpaddePos = 0;
 //Racevariabler
 var raceDistance = 350;
 
+var hareSøvn = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250]
 
 //Racefunktion
-function Race() {
-    while (harePos < raceDistance && skildpaddePos < raceDistance) {
-        skildpaddePos += skildpaddeSpeed;
-        harePos += hareSpeed;
-    }
+var text = "";
+for (harepos = 0; harepos <= raceDistance; harepos++) {
+    if (harepos == hareSøvn[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]) { continue; }
+    text += "Haren er " + harepos + " langt inde i løbet" + <br>;
+    console.log(text);
 }
-
 
 //Finder hvem der har vundet
 if (harePos >= raceDistance > skildpaddePos) {
     console.log("Hare vinder!")
 }
 
-//Animation
-var playButton = document.querySelector('.play');
-
+window.onload = function() {
 var Animation = anime({
-    targets: 'img',
+    targets: '.RaceBackground img',
     translateY: -raceDistance,
-    duration: hareSpeed + 50000,
+    duration: harePos * 100,
     direction: 'alternate',
-    autoplay: false
+    autoplay: false,
+    loop: false,
 });
 
-playButton.addEventListener('click', function() {Animation.play(); });
+document.querySelector('.kontrolpanel .play').onclick = Animation.play;
+document.querySelector('.kontrolpanel .stop').onclick = Animation.restart;
+}

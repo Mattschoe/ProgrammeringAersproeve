@@ -3,21 +3,32 @@
     <title>Hare og Skildpadde Simulation</title>
     <head>
       <meta charset=UTF-8>
-      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="styles.css"> <!-- Refererer CSS scriptet til HTML dokumentet -->
+      <link rel="stylesheet" href="fonts.css"> <!-- Refererer CSS scriptet til HTML dokumentet -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script> <!-- Tilføjer AnimeJS library'et til vores kode-->
+      <script src="main.js"></script> <!-- Refererer Javascript scriptet til HTML dokumentet -->
     </head>
     
     <body>
     <div class="RaceBackground">
         <img class="Hare" src="Hare.png" width="100" height="127.3" id="Hare">
-        <img class="Skildpadde" src="Skildpadde.png" width="80" height="80" id="Skildpadde">
+        <!-- <img class="Skildpadde" src="Skildpadde.png" width="80" height="80" id="Skildpadde"> -->
+        <div class="Startbanner"><h class="bannerfont">Start!</h></div>  
+        <div class="Slutbanner"><h class="bannerfont">Sejr!</h></div>
     </div>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js"></script>
-        <script src="main.js"></script>
-        
-        
+        .
         <br>
+    <div class="kontrolpanel">
         <button class="play">Start Simulation</button>
-        <button class="pause">Stop Simulation</button>
+        <button class="stop">Genstart Simulation</button>   
+        
+        <div class="console">
+            <h class="h3">Konsol</h>
+            <h class="consoletxt">Hejsa!</h>
+            
+        </div>
+    </div>   
+    
     </body>
 </html>
