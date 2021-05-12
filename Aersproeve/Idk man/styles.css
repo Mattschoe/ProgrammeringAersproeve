@@ -2,16 +2,22 @@ body {
     background-color: darkslategray;
 }
 
-.RaceBackground {
+.RaceBaggrund {
     background-color: beige;
     width: 500px;
     height: 600px;
 }
 
-.RaceBackground img {
-    position: relative;
-    left: 100px;
-    top: 470px;
+.myAnimationHARE {
+  position: relative;
+  left: 100px;
+  top: 450px;
+}
+
+.myAnimationSKILDPADDE {
+  position: relative;
+  left: 180px;
+  top: 415px;
 }
 
 .Slutbanner {
