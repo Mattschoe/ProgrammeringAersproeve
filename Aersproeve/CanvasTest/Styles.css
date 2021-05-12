@@ -14,7 +14,7 @@ canvas {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: gray;
+    background: #161616;
 }
 
 /* Dette styke style bestemer hvordan mit header skal se ud */
@@ -28,11 +28,6 @@ header {
     color: white;
 }
 
-/* Dette sørger for at alt i sectionet rykkeer sig godt i forhold til hindanden */
-section {
-    display: flex;
-}
-
 /* Den har styler navigations menuen */
 nav {
     background: #194350;
@@ -40,14 +35,42 @@ nav {
 
 }
 
+p {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white; 
+}
+
+h1 {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: white; 
+}
+
+ .container {
+        position: relative;
+        width: 200px;
+        margin: 0 auto; 
+    }
+
 /* Menuen er sat op i liste form. Dette sørger for at det ser godt ud */
 /* De tre næste hjælper menuen med at se og fungere bedre. Den sætter noget skygge på og lidt animation som hover effekt*/
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
+    overflow: hidden;
     background-color: #9dbeb9;
+}
+
+li {
+    float: left;
 }
 
 li a {
@@ -59,16 +82,8 @@ li a {
 
 li a:hover:not(.active) {
     color: #ff8882;
-    font-weight: Bold;
 }
 
-/* Den her styler alt inden for artilkerne. I mit tilfæld bruger jeg det mest til farver. Der er specifike steder inde i HTMLen hvor der bliver specificeret størrelsen til et lille stykke tekst */
-article {
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: #f1f1f1;
-    padding: 10px;
-}
 
 /* dette sørger for det link der står i footeren */
 .LTP {
