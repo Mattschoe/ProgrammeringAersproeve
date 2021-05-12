@@ -1,20 +1,11 @@
-canvas {
-    border: 1px solid black;
-    background: beige;
-    height: 400px;
-    width: 400px;
-}
-
 /* Dette øverset del sørger for at der ikke er en hcid border hele vejen ude i kanten */
 * {
     box-sizing: border-box;
     margin: 0
 }
 
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #161616;
+    background-color: darkslategray;
 }
 
 /* Dette styke style bestemer hvordan mit header skal se ud */
@@ -106,4 +97,103 @@ footer {
     section {
         flex-direction: column;
     }
+}
+
+.Baggrund {
+    background-color: beige;
+    width: 500px;
+    height: 600px;
+}
+
+.Slutbanner {
+    position: absolute;
+    background-color: darkgoldenrod;
+    width: 500px;
+    height: 20px;
+    top: 130px;
+}
+
+.Startbanner {
+    position: absolute;
+    background-color: darkgoldenrod;
+    width: 500px;
+    height: 20px;
+    top: 520px;
+}
+
+.myAnimationHARE {
+  position: relative;
+  left: 100px;
+  top: 450px;
+}
+
+.myAnimationSKILDPADDE {
+  position: relative;
+  left: 180px;
+  top: 415px;
+}
+
+.kontrolpanel {
+  position: relative;
+  top: -120px;
+  left: 140px;
+}
+
+.kontrolpanel {
+    background-color: navajowhite;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    top: 10px;
+    left: -0px; 
+}
+
+.console {
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+
+button {
+    background-color: transparent;
+    color: black;
+    border: transparent;
+    padding: 10px 25px;
+    font-size: 18px;
+    position: relative;
+    top: 10px;
+    left: 2px;
+}
+
+button:focus {
+    background-color: #fff;
+    color: #000;
+}
+
+.h3 {
+    font-family: Monaco;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.consoletxt {
+    position: relative;
+    top: 35px;
+    left: -30px;
+    
+}
+
+.bannerfont {
+    color: white;
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-family: Arial;
+    font-size: 18px;
 }

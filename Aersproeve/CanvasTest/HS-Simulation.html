@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>Hare og Skildpadde Simulation</title>
-<script src="canvas.js"></script>
+<script src="anime.js"></script>
 <link rel="stylesheet" type="text/css" href="Styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
 
 <head>
 </head>
 
 <body>
-
-    <header>
-        <h2>Hare-Skilpade Simulationen</h2>
-    </header>
-
     <section>
-        <nav>
-            <ul>
+           <nav> <!-- I nav der definere vi hvor menuens links skal pege hen. Den bliver brugt på alle sider herinde -->
+               <ul>
                 <li><a href="Forside.html">Forside</a></li>
                 <li><a href="HS-Simulation.html">Hare-Skildpadde Simulationen</a></li>
                 <li><a href="Synopse.html">Synopse</a></li>
                 <li><a href="OmOs.html">OM OS</a></li>
-            </ul>
-        </nav>
-            <canvas id="canvas"></canvas>
+               </ul>
+          </nav>
+        <br> 
     </section>
+ 
+ 
+ 
+ 
+  <div class="Baggrund">
+    <div class="Startbanner"><h class="bannerfont">Start!</h></div>
+    <div class="Slutbanner"><h class="bannerfont">Sejr!</h></div>
 
+    <img src="Hare.png" class="myAnimationHARE" width="100" height="127.3">
+    <img src="Skildpadde.png" class="myAnimationSKILDPADDE" width="80" height="80">
+  </div>
+
+  <div class="kontrolpanel">
+    <button class="play">Start Simulation</button>
+    <button class="stop">Genstart Simulation</button>
+
+    <div class="console">
+      <h class="h3">Konsol</h>
+      <h class="consoletxt" onclick="RaceTale()">Hejsa!</h>
+    </div>
+  </div>
 </body>
 
 </html>
