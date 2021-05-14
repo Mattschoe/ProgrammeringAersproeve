@@ -1,3 +1,4 @@
+window.onload = function() {
 var hareSpeed = 10000; //Harens hastighed (ms)
 var skildpaddeSpeed = 20000; //Skildpaddens hastighed (ms)
 
@@ -5,7 +6,7 @@ var skildpaddeSpeed = 20000; //Skildpaddens hastighed (ms)
 var raceDistance = 500; //Racelængde
 var hareSøvn = 3000; //Hvor lang tid haren sover (ms)
 
-window.onload = function() { //window.onload sikrer at HTML dokumenterne loader først ind ved at først loade function() ind når browseren når til den
+ //window.onload sikrer at HTML dokumenterne loader først ind ved at først loade function() ind når browseren når til den
 var Timeline = anime.timeline({ //Opretter en variable ud fra en animejs tidslinje
   easing: 'easeInOutSine', //Definerer hvilken form for easing der skal bruges i animationstidslinjen (Eksempler på easing: https://codepen.io/kcjpop/pen/GvdQdX)
   loop: false, //Sørger for at simulationen ikke bare kører i et konstant loop
@@ -35,7 +36,15 @@ Timeline //Vi tilføjer nu elementer til vores tidslinje
 /* SKILDPADDE */
 
 /*Vi får nu JavaScript til at lede efter kontrolpanelet (som er under en class under <div>) i vores HTML fil og herefter finder enten .play eller .stop som er to forskellige buttons med to forskellige class's til enten at starte Timeline variablen eller restarte den */
-document.querySelector('.kontrolpanel .play').onclick = Timeline.play; 
-document.querySelector('.kontrolpanel .stop').onclick = Timeline.restart;
-}
+document.getElementById("play").onclick = Timeline.play; 
+document.getElementById("stop").onclick = Timeline.restart;
+    
+console.log("uwu");
+function RaceKommentator() {            
+    document.getElementById("RaceKommentator").innerHTML = "Skildpadden vinder!";
+    setTimeout(RaceKommentator, 5);
+}   
 
+document.getElementById("play").onclick = console.log("hejsa"); //Refererer tilbage til kontrolpanelet og startknappen til at starte funktionen RaceKommentator
+
+}
