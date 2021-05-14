@@ -2,7 +2,6 @@
 <html lang="en">
 <title>Hare og Skildpadde Simulation</title>
 <script src="anime.js"></script>
-<script src="RaceKommentator.js"></script>
 <link rel="stylesheet" type="text/css" href="Styles.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
 
@@ -10,6 +9,9 @@
 </head>
 
 <body>
+    <header>
+        <h2>Simulationen</h2>
+    </header>
     <section>
            <nav> <!-- I nav der definere vi hvor menuens links skal pege hen. Den bliver brugt på alle sider herinde -->
                <ul>
@@ -30,12 +32,22 @@
   </div>
 
   <div class="kontrolpanel">  <!-- Opretter et kontrolpanel -->
-    <button id="play">Start Simulation</button> <!-- Starter simulationen -->
-    <button id="stop">Genstart Simulation</button> <!-- Slutter simulationen -->
+    <button class="play">Start Simulation</button> <!-- Starter simulationen -->
+    <button class="stop">Genstart Simulation</button> <!-- Slutter simulationen -->
      <div class="console"> <!-- Opretter en konsol hvor der kommer til at stå hvem der vinder -->
       <h class="h3">Konsol</h>
       <h class="consoletxt" id="RaceKommentator"></h>
      </div>
   </div>
+
+<script>
+        function RaceKommentator() {
+            setTimeout(function() { document.getElementById("RaceKommentator").innerHTML = "Skildpadden vinder!"; }, skildpaddeSpeed);
+        }   
+        document.querySelector('.kontrolpanel .play').onclick = RaceKommentator(); //Refererer tilbage til kontrolpanelet og startknappen til at starte funktionen RaceKommentator
+        
+    </script>
+
+    
 </body>
 </html>
